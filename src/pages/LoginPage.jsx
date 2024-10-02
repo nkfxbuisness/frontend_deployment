@@ -5,15 +5,15 @@ import {HiArrowSmallRight} from "react-icons/hi2"
 import showToastMessage from "../components/toast/Toast";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import UserContext, { checkTokenExpiration } from "../context/UserContext";
+import UserContext from "../context/UserContext";
 
 const LoginPage = () => {
   let navigate = useNavigate();
-  const {user,setUser,token,setToken} = useContext(UserContext)
+  const {setUser,setToken} = useContext(UserContext)
   // console.log(user,token)
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
-  const [mobile, setMobile] = useState("");
+  // const [mobile, setMobile] = useState("");
   const [show, setShow] = useState(false);
 
   const submit = async () => {

@@ -1,6 +1,6 @@
 import "./App.css";
-import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
-import { useContext, useEffect, useState } from "react";
+import { Navigate, Route, Routes } from "react-router-dom";
+import { useContext } from "react";
 import { ToastContainer } from "react-toastify";
 
 //pages
@@ -25,7 +25,7 @@ import ComissionDistribution from "./components/adminPage/ComissionDistribution"
 import AccountActivationList from "./components/adminPage/AccountActivationList";
 import LoginPage from "./pages/LoginPage";
 import AdminLogin from "./pages/AdminLogin";
-import UserContext, { checkTokenExpiration } from "./context/UserContext";
+import UserContext from "./context/UserContext";
 import { AdminProvider } from "./context/AdminContext";
 import TotalBusiness from "./components/userPage/TotalBusiness";
 import TeamBuisness from "./components/userPage/TeamBuisness";
@@ -34,7 +34,7 @@ import Temp from "./components/auth/Temp";
 import AccountSuspended from "./components/userPage/AccountSuspended";
 
 function App() {
-  const { user, setUser, token, setToken } = useContext(UserContext);
+  const { user} = useContext(UserContext);
   const id = user?._id;
 
   return (

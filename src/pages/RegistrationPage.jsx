@@ -11,7 +11,7 @@ import KYCdetails from "../components/auth/steps/KYCdetails";
 import { StepperContext } from "../context/StepperContext";
 import showToastMessage from "../components/toast/Toast";
 import { MdOutlineLogin } from "react-icons/md";
-import userSchema, { warn } from "../data_validation/signupFormValidation";
+import userSchema from "../data_validation/signupFormValidation";
 
 const RegistrationPage = () => {
   let navigate = useNavigate();

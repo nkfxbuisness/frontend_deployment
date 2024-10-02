@@ -1,17 +1,14 @@
-import React, { useContext, useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useContext} from "react";
+import { useNavigate } from "react-router-dom";
 import { BsGraphUpArrow } from "react-icons/bs";
-import { FaCircleDot } from "react-icons/fa6";
-import { FaUser } from "react-icons/fa";
 import { FiUser } from "react-icons/fi";
 // import { BiLogOut } from "react-icons/bi";
 import { MdOutlineLogout } from "react-icons/md";
 import AdminContext from "../../context/AdminContext";
-import UserContext from "../../context/UserContext";
 
 const Navbar = () => {
   let navigate = useNavigate();
-  const { admin, setAdmin, token, setToken } = useContext(AdminContext);
+  const { admin, setAdmin, setToken } = useContext(AdminContext);
   const logoutHandler = () => {
     localStorage.removeItem("adminInfo");
     localStorage.removeItem("adminToken");

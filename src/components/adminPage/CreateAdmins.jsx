@@ -128,7 +128,7 @@ const CreateAdmins = () => {
             Authorization: `Bearer ${token}`, // Include the JWT token in the Authorization header
           },
         };
-        const { data } = await axios.delete(
+        await axios.delete(
           `https://server-deployment-jet.vercel.app/api/admin/deleteAdmin/${Admin._id}`,
           config
         );
