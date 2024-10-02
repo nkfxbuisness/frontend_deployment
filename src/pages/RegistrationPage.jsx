@@ -10,7 +10,6 @@ import KYCdetails from "../components/auth/steps/KYCdetails";
 // import Referral from "../components/auth/steps/";
 import { StepperContext } from "../context/StepperContext";
 import showToastMessage from "../components/toast/Toast";
-import successVideo from "../components/images/success.mp4";
 import { MdOutlineLogin } from "react-icons/md";
 import userSchema, { warn } from "../data_validation/signupFormValidation";
 
