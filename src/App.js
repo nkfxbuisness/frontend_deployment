@@ -32,6 +32,7 @@ import TeamBuisness from "./components/userPage/TeamBuisness";
 import PostAnnouncement from "./components/adminPage/PostAnnouncement";
 import Temp from "./components/auth/Temp";
 import AccountSuspended from "./components/userPage/AccountSuspended";
+import LandingPage from "./pages/LandingPage";
 
 function App() {
   const { user} = useContext(UserContext);
@@ -40,7 +41,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        {/* <Route path="/" Component={UserHomePage} /> */}
+        <Route path="/" Component={LandingPage} />
         <Route path="/auth/register" Component={RegistrationPage} />
         <Route path="/auth/login" Component={LoginPage} />
         <Route path="/auth/temp" Component={Temp} />
